@@ -1,18 +1,9 @@
-image: golang:1.5
-git:
-  path: github.com/danielkrainas/aie-burnit
-script:
-  - echo "build commands"
-  - echo "no build command"
-  - echo "no test command"
-clone:
-  path: github.com/danielkrainas/aie-burnit
 build:
   image: golang:1.5
   commands:
-    - echo "build commands"
-    - echo "no build command"
-    - echo "no test command"
+  - echo "build commands"
+  - echo "no build command"
+  - echo "no test command"
 publish:
   docker:
     file: ./Dockerfile
@@ -23,4 +14,3 @@ publish:
     repo: $$docker_repo
     email: $$docker_user_email
     tag: $$COMMIT
-    
